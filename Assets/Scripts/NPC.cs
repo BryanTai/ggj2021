@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-	// Start is called before the first frame update
-	void Start()
+	public string ID;
+	public NPCData Data;
+	public SpriteRenderer SpriteRenderer;
+
+
+	private void Start()
 	{
-		
+		if(string.IsNullOrEmpty(ID))
+		{
+			Debug.LogError("[NPC] Missing ID! Cannot Initialize");
+			return;
+		}
+
+		SpriteRenderer.sprite = Data.GetSprite(ID);
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-		
-	}
 }

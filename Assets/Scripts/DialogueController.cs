@@ -23,8 +23,23 @@ public class DialogueController : MonoBehaviour
 		if(Input.GetButtonDown("Fire1") && _currentNPC != null)
 		{
 
-			_dialogueUIController.ShowDialogueText("Hey there, James"); //TODO: TESTING!
+			_dialogueUIController.SetNPCSprite(_currentNPC.ID);
+ //TODO: TESTING!
+			switch(_currentNPC.ID)
+			{
+				case "Goblin_01" :
+				
+				_dialogueUIController.ShowDialogueText("I'm a Goblin!");
+				break;
 
+				case "Skeleton_02" :
+				_dialogueUIController.ShowDialogueText("I'm a Skeleton!");
+				break;
+
+				default:
+				Debug.LogError("SOMETHINGS WRONG");
+				break;
+			}
 		}
 	}
 

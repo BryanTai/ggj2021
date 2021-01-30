@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-	// Start is called before the first frame update
-	void Start()
-	{
-		
-	}
+	public GameObject PlayerPrefab;
 
-	// Update is called once per frame
-	void Update()
-	{
-		
-	}
+	public DialogueUIController DialogueUIController;
 }

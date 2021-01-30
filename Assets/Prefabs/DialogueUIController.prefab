@@ -164,6 +164,7 @@ MonoBehaviour:
   NPCDialogueContainer: {fileID: 2493401633916067229}
   DialogueText: {fileID: 2493401634372013395}
   NPCImage: {fileID: 2493401633665376019}
+  NPCData: {fileID: 11400000, guid: f8de9e1950e545c4b9205f3ebd12cdb7, type: 2}
 --- !u!1 &2493401633086574477
 GameObject:
   m_ObjectHideFlags: 0

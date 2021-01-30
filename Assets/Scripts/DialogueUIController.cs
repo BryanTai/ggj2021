@@ -9,11 +9,22 @@ public class DialogueUIController : MonoBehaviour
 	public GameObject NPCDialogueContainer;
 	public Text DialogueText;
 	public Image NPCImage;
+	public NPCData NPCData;
 
 	private void Start()
 	{
 		TalkPromptContainer.SetActive(false);
 		NPCDialogueContainer.SetActive(false);
+	}
+
+	public bool IsShowingTalkPrompt()
+	{
+		return TalkPromptContainer.activeSelf;
+	}
+
+	public bool IsShowingDialogue()
+	{
+		return NPCDialogueContainer.activeSelf;
 	}
 
 	public void ShowTalkPrompt()
@@ -30,7 +41,9 @@ public class DialogueUIController : MonoBehaviour
 
 	public void SetNPCSprite(string npcID)
 	{
-		//TODO: Implement
+		NPCImage.sprite = NPCData.GetSprite(npcID);
 	}
+
+	
 	
 }
