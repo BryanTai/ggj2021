@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7757283630253486045}
   - component: {fileID: 7757283631510169910}
   m_Layer: 0
-  m_Name: mag
+  m_Name: magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
