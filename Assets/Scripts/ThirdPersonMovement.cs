@@ -7,11 +7,18 @@ using UnityEngine;
 public class ThirdPersonMovement : MonoBehaviour
 {
 	public CharacterController controller;
-	public Transform camera;
+	private Transform cameraTransform;
+
+	public JamesAnimationController animationController;
 
 	public float Speed = 6f;
 	public float TurnSmoothTime = 0.1f;
 	float turnSmoothVelocity;
+
+	private void Start()
+	{
+		cameraTransform = FindObjectOfType<Camera>().transform;
+	}
 
 	private void Update()
 	{
@@ -20,14 +27,25 @@ public class ThirdPersonMovement : MonoBehaviour
 
 		Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-		if(direction.magnitude >= 0.1f)
+		bool isRunning = direction.magnitude >= 0.1f;
+
+		if(isRunning)
 		{
-			float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+			float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
 			float smoothedAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TurnSmoothTime);
 			transform.rotation = Quaternion.Euler(0f, smoothedAngle, 0f);
 
 			Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 			controller.Move(moveDirection * Speed * Time.deltaTime);
+		}
+
+		animationController.SetRunning(isRunning);
+
+		//TODO: This is just for debugging
+
+		if(Input.GetButtonDown("Fire1"))
+		{
+			animationController.TriggerPickup();
 		}
 	}
 }
