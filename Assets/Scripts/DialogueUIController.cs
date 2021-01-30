@@ -13,8 +13,7 @@ public class DialogueUIController : MonoBehaviour
 
 	private void Start()
 	{
-		TalkPromptContainer.SetActive(false);
-		NPCDialogueContainer.SetActive(false);
+		HideAllDialogueUIElements();
 	}
 
 	public bool IsShowingTalkPrompt()
@@ -37,6 +36,12 @@ public class DialogueUIController : MonoBehaviour
 		TalkPromptContainer.SetActive(false);
 		NPCDialogueContainer.SetActive(true);
 		DialogueText.text = text;
+	}
+
+	public void HideAllDialogueUIElements()
+	{
+		TalkPromptContainer.SetActive(false);
+		NPCDialogueContainer.SetActive(false);
 	}
 
 	public void SetNPCSprite(string npcID)

@@ -56,4 +56,10 @@ public class DialogueController : MonoBehaviour
 
 	}
 
+	private void OnTriggerExit(Collider other)
+	{
+		_dialogueUIController.HideAllDialogueUIElements();
+		_currentNPC = null;
+	}
+
 }
