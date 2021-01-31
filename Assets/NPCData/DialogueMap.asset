@@ -46,7 +46,40 @@ MonoBehaviour:
       - CurrentSpeaker: 3
         DialogueText: Nah, that ain't it chief.
   - NPC: 4
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 4
+        DialogueText: Have you seen Shiny?
+      - CurrentSpeaker: 0
+        DialogueText: <blop>
+      - CurrentSpeaker: 4
+        DialogueText: 'Where could Shiny be... '
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 0
+        DialogueText: <bloop>
+      - CurrentSpeaker: 4
+        DialogueText: 'Shiny! I thought I lost you. I will never take my eye off
+          you again. Never ever! '
+      - CurrentSpeaker: 4
+        DialogueText: 'Thanks friend. '
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 4
+        DialogueText: 'Do you think I should get Shiny a little hat? '
+      - CurrentSpeaker: 0
+        DialogueText: <blop blop>
+      - CurrentSpeaker: 4
+        DialogueText: 'Oh that would be so cute! '
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 4
+        DialogueText: ' I said Shiny! S H I N Y.'
+      - CurrentSpeaker: 0
+        DialogueText: <bloorp>
+      - CurrentSpeaker: 4
+        DialogueText: 'We all make mistakes. '
   - NPC: 5
     Conversations: []
   - NPC: 6

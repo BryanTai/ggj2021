@@ -23,7 +23,7 @@ MonoBehaviour:
     DisplayName: Molar
     Sprite: {fileID: 21300000, guid: 63866e3fd0bf5ee4aa458352b78cfb5f, type: 3}
   - Name: 6
-    DisplayName: Mr. Dobig
+    DisplayName: Mr. Doobig
     Sprite: {fileID: 21300000, guid: 7c5b49946674c0147a2dc9c5c37cc364, type: 3}
   - Name: 7
     DisplayName: Skele The Muscular

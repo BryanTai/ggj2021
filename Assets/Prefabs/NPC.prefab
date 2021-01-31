@@ -219,6 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ddb17210adfbc4d945fa6412c748b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 
-  Data: {fileID: 11400000, guid: f8de9e1950e545c4b9205f3ebd12cdb7, type: 2}
+  Name: 0
   SpriteRenderer: {fileID: 2830088919457788839}
+  HasReceivedDesiredItem: 0
+  NPCSpriteMap: {fileID: 11400000, guid: f8de9e1950e545c4b9205f3ebd12cdb7, type: 2}
+  DesiredItemsData: {fileID: 11400000, guid: d3b7a7aa0ac94b7428ee00444e60b288, type: 2}
+  StrikesRemaining: 0

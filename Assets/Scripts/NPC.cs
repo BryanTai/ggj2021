@@ -5,22 +5,28 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
 	public NPCName Name;
-	public NPCData Data;
+	
 	public SpriteRenderer SpriteRenderer;
 
-	public Item DesiredItem;
+	private Item _desiredItem;
 	public bool HasReceivedDesiredItem;
+
+	[Header("Data")]
+	public NPCData NPCSpriteMap;
+	public NPCDesiredItems DesiredItemsData;
 
 [HideInInspector]
 	public int StrikesRemaining;
 
 	private void Start()
 	{
-		SpriteRenderer.sprite = Data.GetSprite(Name);
+		SpriteRenderer.sprite = NPCSpriteMap.GetSprite(Name);
+		_desiredItem = DesiredItemsData.GetDesiredItem(Name);
+	
 		StrikesRemaining = 3;
 		HasReceivedDesiredItem = false;
 
-		if(DesiredItem == null)
+		if(_desiredItem == null)
 		{
 			Debug.LogError("[NPC] - Missing Desired Item for " + Name.ToString());
 		}
@@ -28,7 +34,11 @@ public class NPC : MonoBehaviour
 
 	public bool TryToGiveDesiredItem(Item givenItem)
 	{
-		HasReceivedDesiredItem = DesiredItem.Equals(givenItem);
+		HasReceivedDesiredItem = _desiredItem.Equals(givenItem);
+		if(!HasReceivedDesiredItem)
+		{
+			ReduceStrike();
+		}
 		return HasReceivedDesiredItem;
 	}
 

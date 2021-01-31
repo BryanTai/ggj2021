@@ -6,7 +6,7 @@
 	Hornblin,
 	Gulum,
 	Molar,
-	MrDobig,
+	MrDoobig,
 	SkeleTheMuscular,
 	LadySerene,
 	Anixaton,
