@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 	public GameObject CurrentNPC;
 
 	public GameObject GameoverScreen;
+	public GameObject TutorialScreen;
 	public Text ItemsReturnText;
 	public Text IncorrectItemsText;
 	public Text ItemsCleanedText;
@@ -24,6 +25,7 @@ public class GameController : MonoBehaviour
 	private void Awake()
 	{
 		GameoverScreen = GameObject.Find("GameOverScreen");
+		TutorialScreen = GameObject.Find("TutorialScreen");
 		
 		ItemsReturnText = GameObject.Find("ItemsReturnedCount").GetComponent<Text>();
 		IncorrectItemsText = GameObject.Find("WrongItemsGiven").GetComponent<Text>();
@@ -57,11 +59,12 @@ public class GameController : MonoBehaviour
 				Application.Quit();
 			}
 		}
-		if(Input.GetButtonDown("Submit"))
+
+		if (Input.GetButtonDown("Submit"))
 		{
-			if (GameoverScreen.activeSelf == true)
+			if (TutorialScreen.activeSelf == true)
 			{
-				GameoverScreen.SetActive(false);
+				TutorialScreen.SetActive(false);
 			}
 		}
 	}
