@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 785139082767907458}
   animationController: {fileID: 6603721866538368970}
-  Speed: 6
+  Speed: 10
   TurnSmoothTime: 0.1
 --- !u!65 &3083421937455297600
 BoxCollider:
@@ -124,7 +124,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8f6050f2a61b1445a97b8afefb4f8c5c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
