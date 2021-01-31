@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 2830088919791054287}
   - component: {fileID: 2830088919791054286}
   - component: {fileID: 2830088919791054284}
+  - component: {fileID: 372213064029140418}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -191,6 +192,7 @@ Transform:
   m_Children:
   - {fileID: 2830088919093711485}
   - {fileID: 2830088919457788838}
+  - {fileID: 4077022741534816392}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -222,6 +224,59 @@ MonoBehaviour:
   Name: 0
   SpriteRenderer: {fileID: 2830088919457788839}
   HasReceivedDesiredItem: 0
+  ModelController: {fileID: 372213064029140418}
   NPCSpriteMap: {fileID: 11400000, guid: f8de9e1950e545c4b9205f3ebd12cdb7, type: 2}
   DesiredItemsData: {fileID: 11400000, guid: d3b7a7aa0ac94b7428ee00444e60b288, type: 2}
   StrikesRemaining: 0
+--- !u!114 &372213064029140418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830088919791054321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728d86a2482a70345b50b3b8f670f4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ModelAnchor: {fileID: 4077022741534816392}
+  GoblinModel: {fileID: 7153328880150790991, guid: 31c554dea9e35c64f965f0a35b3a0f91,
+    type: 3}
+  OgreModel: {fileID: 19189476019196141, guid: 671314fe43ff23547aa0790ef6e58eb1, type: 3}
+  SkeletonModel: {fileID: 4470876932763270707, guid: fc4b603812a2c1c47bde35d6deafc201,
+    type: 3}
+  ElementalModel: {fileID: 5562787263870843011, guid: 327320c6382b24445a7613e9d7d64172,
+    type: 3}
+  SlimeModel: {fileID: 6267232762586488416, guid: abf9ec5ddd8bc5440ad1ddff52fff043,
+    type: 3}
+--- !u!1 &6893680079236028876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4077022741534816392}
+  m_Layer: 0
+  m_Name: ModelAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4077022741534816392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6893680079236028876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2830088919791054287}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

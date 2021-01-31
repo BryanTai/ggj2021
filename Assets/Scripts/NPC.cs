@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
 
 	private Item _desiredItem;
 	public bool HasReceivedDesiredItem;
+	public NPCModelController ModelController;
 
 	[Header("Data")]
 	public NPCData NPCSpriteMap;
@@ -25,6 +26,8 @@ public class NPC : MonoBehaviour
 	
 		StrikesRemaining = 3;
 		HasReceivedDesiredItem = false;
+
+		ModelController.TrySetModelFromName(Name);
 
 		if(_desiredItem == null)
 		{
