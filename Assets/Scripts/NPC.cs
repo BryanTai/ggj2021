@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour
 		if(!modelSet)
 		{
 			SpriteRenderer.gameObject.SetActive(true);
-			SpriteRenderer.sprite = NPCSpriteMap.GetSprite(Name);
+			SpriteRenderer.sprite = NPCSpriteMap.GetNPCData(Name).Sprite;
 		}
 		else
 		{

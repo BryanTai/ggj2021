@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueUIController
       objectReference: {fileID: 0}
+    - target: {fileID: 2493401632927505669, guid: 113871d6eec987847b63933f2f50038c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113871d6eec987847b63933f2f50038c, type: 3}
 --- !u!224 &481999674 stripped
@@ -454,7 +459,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: df63882429f6f2447864419a89fd098e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1241,7 +1246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13545349, y: -0, z: -0, w: 0.99078375}
-  m_LocalPosition: {x: 0, y: 6.03, z: -10}
+  m_LocalPosition: {x: -8.08, y: 5.44, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

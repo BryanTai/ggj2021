@@ -14,13 +14,13 @@ public class NPCData : ScriptableObject
 
 	}
 
-	public Sprite GetSprite(NPCName name)
+	public NPC GetNPCData(NPCName name)
 	{
 		foreach(NPC npc in data)
 		{
 			if(npc.Name.Equals(name))
 			{
-				return npc.Sprite;
+				return npc;
 			}
 		}
 

@@ -8,6 +8,7 @@ public class DialogueUIController : MonoBehaviour
 	public GameObject TalkPromptContainer;
 	public GameObject NPCDialogueContainer;
 	public Text DialogueText;
+	public Text SpeakerText;
 	public Image NPCImage;
 	public NPCData NPCData;
 
@@ -46,6 +47,8 @@ public class DialogueUIController : MonoBehaviour
 
 	public void SetNPCSprite(NPCName name)
 	{
-		NPCImage.sprite = NPCData.GetSprite(name);
+		var data = NPCData.GetNPCData(name);
+		NPCImage.sprite = data.Sprite;
+		SpeakerText.text = data.DisplayName;
 	}
 }
