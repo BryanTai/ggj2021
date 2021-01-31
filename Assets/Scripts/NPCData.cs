@@ -9,6 +9,7 @@ public class NPCData : ScriptableObject
 	public class NPC
 	{
 		public NPCName Name;
+		public string DisplayName = "Monster";
 		public Sprite Sprite;
 
 	}
