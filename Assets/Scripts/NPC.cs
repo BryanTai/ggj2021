@@ -21,13 +21,21 @@ public class NPC : MonoBehaviour
 
 	private void Start()
 	{
-		SpriteRenderer.sprite = NPCSpriteMap.GetSprite(Name);
 		_desiredItem = DesiredItemsData.GetDesiredItem(Name);
 	
 		StrikesRemaining = 3;
 		HasReceivedDesiredItem = false;
 
-		ModelController.TrySetModelFromName(Name);
+		bool modelSet = ModelController.TrySetModelFromName(Name);
+		if(!modelSet)
+		{
+			SpriteRenderer.gameObject.SetActive(true);
+			SpriteRenderer.sprite = NPCSpriteMap.GetSprite(Name);
+		}
+		else
+		{
+			SpriteRenderer.gameObject.SetActive(false);
+		}
 
 		if(_desiredItem == null)
 		{
