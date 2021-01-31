@@ -74,16 +74,17 @@ public class DialogueController : MonoBehaviour
 			return false;
 		}
 		
-		if(_currentNPC.Name != NPCName.Slime)
-		{
-			print("ASDFASDFGDASF");
-			GameController.ItemsReturned += 1;
-		}
+
 
 		bool gaveDesiredItem = _currentNPC.TryToGiveDesiredItem(givenItem);
 
 		var newContext = gaveDesiredItem ? DialogueData.ConversationContext.RECEIVING_ITEM : DialogueData.ConversationContext.WRONG_ITEM;
 		InterruptCurrentDialogue(newContext);
+
+		if (_currentNPC.Name != NPCName.Slime && gaveDesiredItem)
+		{
+			GameController.ItemsReturned += 1;
+		}
 
 		return gaveDesiredItem;
 	}
