@@ -119,6 +119,7 @@ public class DialogueController : MonoBehaviour
 
 	private void CloseDialogue()
 	{
+		_currentNPC = null;
 		_currentLineIndex = -1;
 		_currentLines = null;
 		_dialogueUIController.HideDialogue();
@@ -128,6 +129,7 @@ public class DialogueController : MonoBehaviour
 	private void OnTriggerExit(Collider other)
 	{
 		CloseDialogue();
+		_dialogueUIController.HideAllDialogueUIElements();
 	}
 
 }
