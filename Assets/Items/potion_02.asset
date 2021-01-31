@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20984e32e481a5d42b6f4485a4b91d1b, type: 3}
-  m_Name: elemental_monthly
+  m_Name: potion_02
   m_EditorClassIdentifier: 
-  name: elemental monthly
-  icon: {fileID: 21300000, guid: a5cd9dc8ee24b4e4798f55f5bc927a1f, type: 3}
+  name: Blue Potion
+  icon: {fileID: 21300000, guid: de36420878fb8024794d64f1837dbf7f, type: 3}

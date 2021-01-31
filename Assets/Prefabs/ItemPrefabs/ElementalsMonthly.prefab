@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7757283629973409667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.74, z: 0}
+  m_LocalPosition: {x: 0, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7757283630253486045}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7757283630253486045}
   - component: {fileID: 7757283631510169910}
   m_Layer: 0
-  m_Name: magazine
+  m_Name: ElementalsMonthly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 7757283630253486044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.67, y: 0, z: 4.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7757283630337923267}
   - {fileID: 7757283629973409676}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af180d0d4cc5950469bc6a37dc39d0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 1
   interactionTransform: {fileID: 7757283630253486045}
   player: {fileID: 0}
   item: {fileID: 11400000, guid: 061692faa927ac04eba125be6a23dac8, type: 2}
@@ -158,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 7757283630337923266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 0.06505, z: 1}
   m_Children: []
   m_Father: {fileID: 7757283630253486045}
   m_RootOrder: 0
