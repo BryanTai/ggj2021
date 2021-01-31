@@ -12,11 +12,11 @@ public class GameController : MonoBehaviour
 
 	public GameObject CurrentNPC;
 
-	public GameObject GameoverScreen;
-	public GameObject TutorialScreen;
-	public Text ItemsReturnText;
-	public Text IncorrectItemsText;
-	public Text ItemsCleanedText;
+	private GameObject GameoverScreen;
+	private GameObject TutorialScreen;
+	private Text ItemsReturnText;
+	private Text IncorrectItemsText;
+	private Text ItemsCleanedText;
 
 	public static int ItemsReturned;
 	public static int IncorrectItems;
