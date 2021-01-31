@@ -73,6 +73,12 @@ public class DialogueController : MonoBehaviour
 		{
 			return false;
 		}
+		
+		if(_currentNPC.Name != NPCName.Slime)
+		{
+			print("ASDFASDFGDASF");
+			GameController.ItemsReturned += 1;
+		}
 
 		bool gaveDesiredItem = _currentNPC.TryToGiveDesiredItem(givenItem);
 

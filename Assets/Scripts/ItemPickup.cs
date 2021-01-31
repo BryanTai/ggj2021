@@ -26,6 +26,7 @@ public class ItemPickup : Interactable {
 	// Pick up the item
 	void PickUp ()
 	{
+		GameController.ItemsCleaned += 1;
 		Inventory.instance.Add(item);	// Add to inventory
 
 		Destroy(gameObject);	// Destroy item from scene

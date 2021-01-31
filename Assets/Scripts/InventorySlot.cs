@@ -44,6 +44,7 @@ public class InventorySlot : MonoBehaviour
             }
             else
             {
+                GameController.IncorrectItems += 1;
                 //TODO: Show the player that they're WRONG. Maybe shake the icon or something.
             }
             
