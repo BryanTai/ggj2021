@@ -7,4 +7,6 @@ public class GameController : MonoBehaviour
 	public GameObject PlayerPrefab;
 
 	public DialogueUIController DialogueUIController;
+
+	public GameObject CurrentNPC;
 }

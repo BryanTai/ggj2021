@@ -10,7 +10,7 @@ using UnityEngine.AI;
 //[RequireComponent(typeof(ColorOnHover))]
 public class Interactable : MonoBehaviour {
 
-	public float radius = 3f;
+	public float radius = 1f;
 	public Transform interactionTransform;
 
 	public Transform player;		// Reference to the player transform
