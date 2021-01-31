@@ -14,9 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - NPC: 1
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 1
+        DialogueText: Get to work!
+      - CurrentSpeaker: 0
+        DialogueText: <blup>
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 1
+        DialogueText: "What? I don\u2019t want your junk! Go give it to the Disposal
+          Slime"
+      - CurrentSpeaker: 0
+        DialogueText: <bloop>
   - NPC: 2
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 2
+        DialogueText: "One man\u2019s trash is this guy\u2019s next meal. Whatcha
+          got for me?"
+      - CurrentSpeaker: 0
+        DialogueText: <bloop>
+      - CurrentSpeaker: 2
+        DialogueText: No rush, take your time. Just make sure you REALLY want me
+          to eat it because you're not getting it back!
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 2
+        DialogueText: <Munch munch> Yum! I hope nobody was looking for that!
   - NPC: 3
     Conversations:
     - Context: 2

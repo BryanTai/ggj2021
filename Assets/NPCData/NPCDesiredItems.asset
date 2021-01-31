@@ -29,3 +29,9 @@ MonoBehaviour:
     DesiredItem: {fileID: 11400000, guid: fd09e2bbc5dff764eb8c56a8d16594c0, type: 2}
   - Name: 6
     DesiredItem: {fileID: 11400000, guid: b731a37183441ac478ebadca97dd9c99, type: 2}
+  - Name: 1
+    DesiredItem: {fileID: 11400000, guid: 686348ef18edcff47a88485efbce418a, type: 2}
+  - Name: 0
+    DesiredItem: {fileID: 11400000, guid: 686348ef18edcff47a88485efbce418a, type: 2}
+  - Name: 2
+    DesiredItem: {fileID: 11400000, guid: 686348ef18edcff47a88485efbce418a, type: 2}

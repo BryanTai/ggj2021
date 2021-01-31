@@ -34,6 +34,18 @@ public class NPC : MonoBehaviour
 
 	public bool TryToGiveDesiredItem(Item givenItem)
 	{
+		if(Name == NPCName.Slime)
+		{
+			//can receive ANY item
+			return true;
+		}
+
+		if(Name == NPCName.Elemental)
+		{
+			//cannot receive anything
+			return false;
+		}
+
 		HasReceivedDesiredItem = _desiredItem.Equals(givenItem);
 		if(!HasReceivedDesiredItem)
 		{
