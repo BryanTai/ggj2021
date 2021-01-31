@@ -108,48 +108,170 @@ MonoBehaviour:
       - CurrentSpeaker: 4
         DialogueText: 'We all make mistakes. '
   - NPC: 5
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 5
+        DialogueText: "Molar is looking for some food...the chewy one\u2026 "
+      - CurrentSpeaker: 0
+        DialogueText: <blop>
+      - CurrentSpeaker: 5
+        DialogueText: "Hurry please, I\u2019m hungry. "
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 5
+        DialogueText: ' Yes, Molar wants that! Molar thank you. '
+      - CurrentSpeaker: 0
+        DialogueText: <blop>
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 5
+        DialogueText: "munch\u2026.munch\u2026. "
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 5
+        DialogueText: 'Molar wants to eat! Molar wants to chew a long long time... '
   - NPC: 6
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 6
+        DialogueText: 'Doot? '
+      - CurrentSpeaker: 0
+        DialogueText: '<bloop?> '
+      - CurrentSpeaker: 6
+        DialogueText: Doot doot!
+      - CurrentSpeaker: 0
+        DialogueText: ' <bloop> <bloop!> '
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 6
+        DialogueText: 'Doot doot doot! '
+      - CurrentSpeaker: 0
+        DialogueText: <bloop> <bloop> <bloop!>
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 6
+        DialogueText: 'Dooooooooooooooooooot! '
+      - CurrentSpeaker: 0
+        DialogueText: '<Blooooooooooooooooooop>! '
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 6
+        DialogueText: '..... '
   - NPC: 7
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 7
+        DialogueText: I need something to drink...like blood!
+      - CurrentSpeaker: 0
+        DialogueText: <bloop?>
+      - CurrentSpeaker: 7
+        DialogueText: "Hey, of course skeletons need drinks too! And I won\u2019t
+          spill a drop! "
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 0
+        DialogueText: <bloop!>
+      - CurrentSpeaker: 7
+        DialogueText: "That\u2019s it! This will boost my physique for sure! Thanks
+          Mr. Jello!"
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 0
+        DialogueText: "<bloop\u2026.>"
+      - CurrentSpeaker: 7
+        DialogueText: "Of course I didn\u2019t spill it! We skeletons digest from
+          our feet!"
+      - CurrentSpeaker: 0
+        DialogueText: <bllooooopppp>
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 7
+        DialogueText: 'Hey! I said I need a red drink for my muscle growth! '
   - NPC: 8
     Conversations:
     - Context: 2
       Lines:
       - CurrentSpeaker: 8
-        DialogueText: How about a joke?
-      - CurrentSpeaker: 0
-        DialogueText: < bloop >
-      - CurrentSpeaker: 8
-        DialogueText: What is a skeleton's favourite snack?
-      - CurrentSpeaker: 0
-        DialogueText: < ... >
-      - CurrentSpeaker: 8
-        DialogueText: ...
-      - CurrentSpeaker: 8
-        DialogueText: Ribs! Hahaha!
-      - CurrentSpeaker: 0
-        DialogueText: < ... >
-      - CurrentSpeaker: 8
-        DialogueText: Well, I thought it was good!
+        DialogueText: "(sing) Hush my dear honey\u2026.Cuca is coming for you\u2026..Head
+          went to the field\u2026..Feet went to the lake..."
     - Context: 0
       Lines:
       - CurrentSpeaker: 8
-        DialogueText: I'm looking for something STABBY
+        DialogueText: CHEATER! Hey, you, green mud!
       - CurrentSpeaker: 0
-        DialogueText: < bloop >
+        DialogueText: <blop?!!!>
+      - CurrentSpeaker: 8
+        DialogueText: Get me something small and STABBY! Quickly!
     - Context: 1
       Lines:
       - CurrentSpeaker: 8
-        DialogueText: Hoho yes PERFECT
+        DialogueText: "Hoho yes PERFECT! Now I will go talk to that jerk\u2026..non-violently\u2026"
       - CurrentSpeaker: 0
-        DialogueText: < blup >
+        DialogueText: "<.....blo...pp\u2026.>"
+      - CurrentSpeaker: 8
+        DialogueText: "Don\u2019t worry. This is for self-defense."
     - Context: 3
       Lines:
       - CurrentSpeaker: 8
-        DialogueText: No, thank you!
+        DialogueText: Are you testing my patience? You are welcome to join my wishlist!
   - NPC: 9
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 9
+        DialogueText: "He...hello! I\u2026.I lost...something...something..very...very
+          precious. Would you...you.. help me find...find her please?"
+      - CurrentSpeaker: 0
+        DialogueText: '<blop><blop> '
+      - CurrentSpeaker: 9
+        DialogueText: "It\u2019s very...de... dear to me...how...how can I lo..lose..her\u2026. "
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 9
+        DialogueText: 'You...found her! You are my savior! Thank you...so... so much! '
+      - CurrentSpeaker: 0
+        DialogueText: <blop?>
+      - CurrentSpeaker: 9
+        DialogueText: "Yes, she\u2019s been with me\u2026.since...since when I was
+          young. I\u2019m less anxious when she is around."
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 9
+        DialogueText: "She\u2019s back\u2026."
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 9
+        DialogueText: "No...that\u2019s...not...not her\u2026.she will be\u2026.be
+          lost...for...forever\u2026. "
   - NPC: 10
-    Conversations: []
+    Conversations:
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 10
+        DialogueText: "Air conditioner\u2019s busted, and I'm boiling."
+      - CurrentSpeaker: 0
+        DialogueText: <blop?>
+      - CurrentSpeaker: 10
+        DialogueText: 'I know I don''t have skin but just seeing the boss makes me
+          feel like I''m burning up. '
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 10
+        DialogueText: "Oh, that\u2019s pretty! I can take that off your hands...er...
+          body?"
+      - CurrentSpeaker: 0
+        DialogueText: <blop>
+      - CurrentSpeaker: 10
+        DialogueText: 'Thanks James. Now if only we could do something about this
+          heat... '
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 10
+        DialogueText: You can't tell but I'm sweating buckets!
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 10
+        DialogueText: "What\u2019s this for? "
