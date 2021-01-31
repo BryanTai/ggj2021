@@ -11,8 +11,8 @@ public class DialogueController : MonoBehaviour
 	private DialogueUIController _dialogueUIController;
 	private ThirdPersonMovement _movementController;
 
-	private DialogueData.DialogueLine[] currentLines = null;
-	private int currentLineIndex = -1;
+	private DialogueData.DialogueLine[] _currentLines = null;
+	private int _currentLineIndex = -1;
 
 	private void Start()
 	{
@@ -34,7 +34,7 @@ public class DialogueController : MonoBehaviour
 	{
 		if(Input.GetButtonDown("Fire1") && _currentNPC != null)
 		{
-			if(currentLines == null)
+			if(_currentLines == null)
 			{
 				LoadDialogueOfCurrentNPC();
 			}
@@ -45,31 +45,62 @@ public class DialogueController : MonoBehaviour
 
 	private void LoadDialogueOfCurrentNPC()
 	{
-		var context = FindConversationContextOfCurrentNPC();
-		currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, context);
-		currentLineIndex = 0;
+		var context = FindStartingConversationContextOfCurrentNPC();
+		_currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, context);
+		_currentLineIndex = 0;
 		_movementController.SetMovementEnabled(false);
 	}
 
-	private DialogueData.ConversationContext FindConversationContextOfCurrentNPC()
+	private DialogueData.ConversationContext FindStartingConversationContextOfCurrentNPC()
 	{
-		//TODO: Find the Actual context from what items the player has, what the NPC is looking for, and the State of the NPC
-		return DialogueData.ConversationContext.BEFORE_ITEM;
+		return _currentNPC.HasReceivedDesiredItem ? DialogueData.ConversationContext.AFTER_ITEM : DialogueData.ConversationContext.BEFORE_ITEM;
+	}
+
+	public bool IsInDialogue()
+	{
+		return _dialogueUIController.NPCDialogueContainer.activeInHierarchy;
+	}
+
+	public bool HasCurrentNPCRecievedDesiredItem()
+	{
+		return _currentNPC != null && _currentNPC.HasReceivedDesiredItem;
+	}
+
+	public bool TryToGiveDesiredItemToCurrentNPC(Item givenItem)
+	{
+		
+		if(_currentNPC == null)
+		{
+			return false;
+		}
+
+		bool gaveDesiredItem = _currentNPC.TryToGiveDesiredItem(givenItem);
+
+		var newContext = gaveDesiredItem ? DialogueData.ConversationContext.RECEIVING_ITEM : DialogueData.ConversationContext.WRONG_ITEM;
+		InterruptCurrentDialogue(newContext);
+
+		return gaveDesiredItem;
+	}
+
+	private void InterruptCurrentDialogue(DialogueData.ConversationContext newContext)
+	{
+		_currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, newContext);
+		_currentLineIndex = 0;
 	}
 
 	private void ShowNextDialogueLine()
 	{
-		if(currentLineIndex >= currentLines.Length || currentLineIndex < 0)
+		if(_currentLineIndex >= _currentLines.Length || _currentLineIndex < 0)
 		{
 			//Dialogue is over, set everything back to normal
 			CloseDialogue();
 		}
 		else
 		{
-			_dialogueUIController.SetNPCSprite(currentLines[currentLineIndex].CurrentSpeaker);
-			_dialogueUIController.ShowDialogueText(currentLines[currentLineIndex].DialogueText);
+			_dialogueUIController.SetNPCSprite(_currentLines[_currentLineIndex].CurrentSpeaker);
+			_dialogueUIController.ShowDialogueText(_currentLines[_currentLineIndex].DialogueText);
 
-			currentLineIndex++;
+			_currentLineIndex++;
 		}
 	}
 
@@ -88,8 +119,8 @@ public class DialogueController : MonoBehaviour
 
 	private void CloseDialogue()
 	{
-		currentLineIndex = -1;
-		currentLines = null;
+		_currentLineIndex = -1;
+		_currentLines = null;
 		_dialogueUIController.HideDialogue();
 		_movementController.SetMovementEnabled(true);
 	}

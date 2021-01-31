@@ -19,7 +19,7 @@ MonoBehaviour:
     Conversations: []
   - NPC: 3
     Conversations:
-    - Context: 0
+    - Context: 2
       Lines:
       - CurrentSpeaker: 3
         DialogueText: Hey James, how's it hanging?
@@ -28,11 +28,23 @@ MonoBehaviour:
       - CurrentSpeaker: 3
         DialogueText: I feel you there buddy. Take it easy
     - Context: 1
-      Lines: []
-    - Context: 2
-      Lines: []
+      Lines:
+      - CurrentSpeaker: 3
+        DialogueText: Hey, this will work! Thanks James!
+      - CurrentSpeaker: 0
+        DialogueText: < bloop >
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 3
+        DialogueText: I don't suppose you have any reading material?
+      - CurrentSpeaker: 0
+        DialogueText: < blup >
+      - CurrentSpeaker: 3
+        DialogueText: Figures.
     - Context: 3
-      Lines: []
+      Lines:
+      - CurrentSpeaker: 3
+        DialogueText: Nah, that ain't it chief.
   - NPC: 4
     Conversations: []
   - NPC: 5
@@ -43,7 +55,7 @@ MonoBehaviour:
     Conversations: []
   - NPC: 8
     Conversations:
-    - Context: 0
+    - Context: 2
       Lines:
       - CurrentSpeaker: 8
         DialogueText: How about a joke?
@@ -61,6 +73,22 @@ MonoBehaviour:
         DialogueText: < ... >
       - CurrentSpeaker: 8
         DialogueText: Well, I thought it was good!
+    - Context: 0
+      Lines:
+      - CurrentSpeaker: 8
+        DialogueText: I'm looking for something STABBY
+      - CurrentSpeaker: 0
+        DialogueText: < bloop >
+    - Context: 1
+      Lines:
+      - CurrentSpeaker: 8
+        DialogueText: Hoho yes PERFECT
+      - CurrentSpeaker: 0
+        DialogueText: < blup >
+    - Context: 3
+      Lines:
+      - CurrentSpeaker: 8
+        DialogueText: No, thank you!
   - NPC: 9
     Conversations: []
   - NPC: 10

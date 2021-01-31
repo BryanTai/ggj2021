@@ -28,6 +28,11 @@ public class DialogueUIController : MonoBehaviour
 		DialogueText.text = text;
 	}
 
+	public bool IsInDialogue()
+	{
+		return NPCDialogueContainer.activeInHierarchy;
+	}
+
 	public void HideAllDialogueUIElements()
 	{
 		TalkPromptContainer.SetActive(false);
@@ -43,7 +48,4 @@ public class DialogueUIController : MonoBehaviour
 	{
 		NPCImage.sprite = NPCData.GetSprite(name);
 	}
-
-	
-	
 }
