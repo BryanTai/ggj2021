@@ -39,6 +39,7 @@ public class DialogueData : ScriptableObject
 			}
 		}
 
+		Debug.LogError(string.Format("[DialogData] - Missing dialogue for NPC {0} during Context {1}", name.ToString(), context.ToString()));
 		return errorDialogue;
 	}
 
