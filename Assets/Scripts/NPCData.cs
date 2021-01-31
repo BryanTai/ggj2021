@@ -8,30 +8,23 @@ public class NPCData : ScriptableObject
 	[System.Serializable]
 	public class NPC
 	{
-		public string ID;
+		public NPCName Name;
 		public Sprite Sprite;
 
 	}
 
-	public Sprite GetSprite(string id)
+	public Sprite GetSprite(NPCName name)
 	{
 		foreach(NPC npc in data)
 		{
-			if(npc.ID.Equals(id))
+			if(npc.Name.Equals(name))
 			{
 				return npc.Sprite;
 			}
 		}
 
-		Debug.LogError("[NPCData] - Cannot find Sprite for NPC with id: " + id);
+		Debug.LogError("[NPCData] - Cannot find Sprite for NPC with id: " + name);
 
 		return null;
-	}
-
-	[System.Serializable]
-	public class DialogueEntry
-	{
-		public string SpeakerID;
-		public string DialogueText;
 	}
 }

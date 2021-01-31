@@ -16,16 +16,6 @@ public class DialogueUIController : MonoBehaviour
 		HideAllDialogueUIElements();
 	}
 
-	public bool IsShowingTalkPrompt()
-	{
-		return TalkPromptContainer.activeSelf;
-	}
-
-	public bool IsShowingDialogue()
-	{
-		return NPCDialogueContainer.activeSelf;
-	}
-
 	public void ShowTalkPrompt()
 	{
 		TalkPromptContainer.SetActive(true);
@@ -41,12 +31,17 @@ public class DialogueUIController : MonoBehaviour
 	public void HideAllDialogueUIElements()
 	{
 		TalkPromptContainer.SetActive(false);
+		HideDialogue();
+	}
+
+	public void HideDialogue()
+	{
 		NPCDialogueContainer.SetActive(false);
 	}
 
-	public void SetNPCSprite(string npcID)
+	public void SetNPCSprite(NPCName name)
 	{
-		NPCImage.sprite = NPCData.GetSprite(npcID);
+		NPCImage.sprite = NPCData.GetSprite(name);
 	}
 
 	

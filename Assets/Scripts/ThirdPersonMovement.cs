@@ -15,37 +15,51 @@ public class ThirdPersonMovement : MonoBehaviour
 	public float TurnSmoothTime = 0.1f;
 	float turnSmoothVelocity;
 
+	private bool isMovementEnabled;
+
 	private void Start()
 	{
 		cameraTransform = FindObjectOfType<Camera>().transform;
+		isMovementEnabled = true;
 	}
 
 	private void Update()
 	{
-		float horizontal = Input.GetAxisRaw("Horizontal"); //between -1 and 1, (A key, D key)
-		float vertical = Input.GetAxisRaw("Vertical"); //between -1 and 1, (W key, S key)
-
-		Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
-
-		bool isRunning = direction.magnitude >= 0.1f;
-
-		if(isRunning)
+		if(isMovementEnabled)
 		{
-			float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-			float smoothedAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TurnSmoothTime);
-			transform.rotation = Quaternion.Euler(0f, smoothedAngle, 0f);
+			float horizontal = Input.GetAxisRaw("Horizontal"); //between -1 and 1, (A key, D key)
+			float vertical = Input.GetAxisRaw("Vertical"); //between -1 and 1, (W key, S key)
 
-			Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-			controller.Move(moveDirection * Speed * Time.deltaTime);
+			Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+			bool isRunning = direction.magnitude >= 0.1f;
+
+			if(isRunning)
+			{
+				float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+				float smoothedAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TurnSmoothTime);
+				transform.rotation = Quaternion.Euler(0f, smoothedAngle, 0f);
+
+				Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+				controller.Move(moveDirection * Speed * Time.deltaTime);
+			}
+
+			animationController.SetRunning(isRunning);
 		}
-
-		animationController.SetRunning(isRunning);
-
-		//TODO: This is just for debugging
-
+		else
+		{
+			animationController.SetRunning(false);
+		}
+		
+		//Dedicated wobble button
 		if(Input.GetButtonDown("Fire1"))
 		{
 			animationController.TriggerPickup();
 		}
+	}
+
+	public void SetMovementEnabled(bool isEnabled)
+	{
+		isMovementEnabled = isEnabled;
 	}
 }

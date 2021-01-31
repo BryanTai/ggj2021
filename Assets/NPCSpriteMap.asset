@@ -13,19 +13,25 @@ MonoBehaviour:
   m_Name: NPCSpriteMap
   m_EditorClassIdentifier: 
   data:
-  - ID: Goblin_01
+  - Name: 3
     Sprite: {fileID: 21300000, guid: 9d5c2f1dd737ce640b0c9dddc46f0b0c, type: 3}
-  - ID: Goblin_02
+  - Name: 4
     Sprite: {fileID: 21300000, guid: c44218ef77c095f4f819155f119f2e3f, type: 3}
-  - ID: Ogre_01
+  - Name: 5
     Sprite: {fileID: 21300000, guid: 63866e3fd0bf5ee4aa458352b78cfb5f, type: 3}
-  - ID: Ogre_02
+  - Name: 6
     Sprite: {fileID: 21300000, guid: 7c5b49946674c0147a2dc9c5c37cc364, type: 3}
-  - ID: Skeleton_01
+  - Name: 7
     Sprite: {fileID: 21300000, guid: 5a1df1ca7efa49b44a4f0b3edf3a8dbd, type: 3}
-  - ID: Skeleton_02
+  - Name: 8
     Sprite: {fileID: 21300000, guid: d5cda7697413a924d8702052976c6da3, type: 3}
-  - ID: Skeleton_03
+  - Name: 9
     Sprite: {fileID: 21300000, guid: 35086b03f9a6a344ca39e5eeb3dafdbc, type: 3}
-  - ID: Skeleton_04
+  - Name: 10
     Sprite: {fileID: 21300000, guid: baa81ec11157f3c44b0a7bff3bfb5be5, type: 3}
+  - Name: 0
+    Sprite: {fileID: 21300000, guid: 2068b6928af036e4484a960e26b5d8e5, type: 3}
+  - Name: 1
+    Sprite: {fileID: 21300000, guid: cca0ca22af6fe414fb57a20d9cb54dd5, type: 3}
+  - Name: 2
+    Sprite: {fileID: 21300000, guid: 2e74222bfbd67c247b6796074f73d24c, type: 3}
