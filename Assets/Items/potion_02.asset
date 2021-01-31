@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20984e32e481a5d42b6f4485a4b91d1b, type: 3}
   m_Name: potion_02
   m_EditorClassIdentifier: 
-  name: Blue Potion
-  icon: {fileID: 21300000, guid: de36420878fb8024794d64f1837dbf7f, type: 3}
+  ItemName: 14
+  Icon: {fileID: 21300000, guid: de36420878fb8024794d64f1837dbf7f, type: 3}

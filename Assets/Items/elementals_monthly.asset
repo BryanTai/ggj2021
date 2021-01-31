@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20984e32e481a5d42b6f4485a4b91d1b, type: 3}
   m_Name: elementals_monthly
   m_EditorClassIdentifier: 
-  name: Elementals Monthly
-  icon: {fileID: 21300000, guid: a5cd9dc8ee24b4e4798f55f5bc927a1f, type: 3}
+  ItemName: 9
+  Icon: {fileID: 21300000, guid: a5cd9dc8ee24b4e4798f55f5bc927a1f, type: 3}

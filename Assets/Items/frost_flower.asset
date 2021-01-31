@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20984e32e481a5d42b6f4485a4b91d1b, type: 3}
   m_Name: frost_flower
   m_EditorClassIdentifier: 
-  name: Frost Flower
-  icon: {fileID: 21300000, guid: 43aeeb71a61a0e54881a3e7ee929ff72, type: 3}
+  ItemName: 10
+  Icon: {fileID: 21300000, guid: 43aeeb71a61a0e54881a3e7ee929ff72, type: 3}

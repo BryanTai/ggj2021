@@ -1,0 +1,23 @@
+﻿public enum ItemName
+{
+	Empty,
+	Amulet_01,
+	Amulet_02,
+	Bones,
+	Burger,
+	Coins,
+	Dagger,
+	Doll,
+	Doot,
+	Elementals_Monthly,
+	Frost_Flower,
+	Helmet,
+	Key,
+	Potion_RED,
+	Potion_BLUE,
+	Potion_PURPLE,
+	Rat,
+	Shark,
+	Shield,
+	Sword
+}

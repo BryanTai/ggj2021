@@ -2,7 +2,18 @@
 
 public class ItemPickup : Interactable {
 
-	public Item item;	// Item to put in the inventory if picked up
+	public ItemName Name;
+	public ItemData Data;
+
+	public SpriteRenderer SpinningIcon;
+
+	private Item item;	// Item to put in the inventory if picked up
+
+	private void Start()
+	{
+		item = Data.GetItem(Name);
+		SpinningIcon.sprite = item.Icon;
+	}
 
 	// When the player interacts with the item
 	public override void Interact()

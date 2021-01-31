@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20984e32e481a5d42b6f4485a4b91d1b, type: 3}
   m_Name: burger_00
   m_EditorClassIdentifier: 
-  name: Burger
-  icon: {fileID: 21300000, guid: afe7fee5f497a02488dace762496ac79, type: 3}
+  ItemName: 3
+  Icon: {fileID: 21300000, guid: afe7fee5f497a02488dace762496ac79, type: 3}
