@@ -27,6 +27,7 @@ public class InventorySlot : MonoBehaviour
 
     public void OnGiveItem()
     {
+        //TODO: Only do this if in a Dialogue
         Inventory.instance.Remove(item);
     }
 }

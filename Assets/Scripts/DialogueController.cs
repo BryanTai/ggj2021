@@ -34,25 +34,35 @@ public class DialogueController : MonoBehaviour
 	{
 		if(Input.GetButtonDown("Fire1") && _currentNPC != null)
 		{
-			if(currentLines == null) //Load up the correct conversation!
+			if(currentLines == null)
 			{
-				//TODO: Find the Actual context from what items the player has, what the NPC is looking for, and the State of the NPC
-				var context = DialogueData.ConversationContext.BEFORE_ITEM;
-				currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, context);
-				currentLineIndex = 0;
+				LoadDialogueOfCurrentNPC();
 			}
 
 			ShowNextDialogueLine();
 		}
 	}
 
+	private void LoadDialogueOfCurrentNPC()
+	{
+		var context = FindConversationContextOfCurrentNPC();
+		currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, context);
+		currentLineIndex = 0;
+		_movementController.SetMovementEnabled(false);
+	}
+
+	private DialogueData.ConversationContext FindConversationContextOfCurrentNPC()
+	{
+		//TODO: Find the Actual context from what items the player has, what the NPC is looking for, and the State of the NPC
+		return DialogueData.ConversationContext.BEFORE_ITEM;
+	}
+
 	private void ShowNextDialogueLine()
 	{
 		if(currentLineIndex >= currentLines.Length || currentLineIndex < 0)
 		{
-			currentLineIndex = -1;
-			currentLines = null;
-			_dialogueUIController.HideDialogue();
+			//Dialogue is over, set everything back to normal
+			CloseDialogue();
 		}
 		else
 		{
@@ -76,10 +86,17 @@ public class DialogueController : MonoBehaviour
 
 	}
 
+	private void CloseDialogue()
+	{
+		currentLineIndex = -1;
+		currentLines = null;
+		_dialogueUIController.HideDialogue();
+		_movementController.SetMovementEnabled(true);
+	}
+
 	private void OnTriggerExit(Collider other)
 	{
-		_dialogueUIController.HideAllDialogueUIElements();
-		_currentNPC = null;
+		CloseDialogue();
 	}
 
 }
