@@ -17,7 +17,7 @@ public class ItemPickup : Interactable {
 	{
 		Inventory.instance.Add(item);	// Add to inventory
 
-		Destroy(gameObject, 0.1f);	// Destroy item from scene
+		Destroy(gameObject);	// Destroy item from scene
 	}
 
 

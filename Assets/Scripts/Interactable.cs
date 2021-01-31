@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour {
 
 	public Transform player;		// Reference to the player transform
 
-	bool hasInteracted = false; // Have we already interacted with the object?
+	public bool hasInteracted = false; // Have we already interacted with the object?
 
 	private void Awake()
 	{
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour {
 
 	void Update ()
 	{
-
+		/*
 		float distance = Vector3.Distance(player.position, interactionTransform.position);
 		// If we haven't already interacted and the player is close enough
 		if (!hasInteracted && distance <= radius)
@@ -33,6 +33,7 @@ public class Interactable : MonoBehaviour {
 			hasInteracted = true;
 			Interact();
 		}
+		*/
 	}
 
 

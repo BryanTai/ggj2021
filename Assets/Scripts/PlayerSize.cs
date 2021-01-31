@@ -8,7 +8,7 @@ public class PlayerSize : MonoBehaviour
     int currentItemNum = 0;
     private Vector3 LargeScale = new Vector3(3.0f, 3.0f, 3.0f);
     private Vector3 MediumScale = new Vector3(2.0f, 2.0f, 2.0f);
-    private Vector3 SmallScale = new Vector3 (1.0f, 1.0f, 1.0f); 
+    private Vector3 SmallScale = new Vector3 (1.0f, 1.0f, 1.0f);
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +20,16 @@ public class PlayerSize : MonoBehaviour
     void Update()
     {
         currentItemNum = Inventory.instance.items.Count;
-        print(currentItemNum);
 
         if(currentItemNum <= 5)
         {
             transform.localScale = SmallScale;
+            transform.position = new Vector3(transform.position.x, 0.6f, transform.position.z);
         }
         else if(currentItemNum > 5  && currentItemNum <= 10)
         {
             transform.localScale = MediumScale;
+            transform.position = new Vector3(transform.position.x, 1.1f, transform.position.z);
         }
         else if(currentItemNum > 10)
         {

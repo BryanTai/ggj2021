@@ -18,7 +18,8 @@ public class TriggerSFX : MonoBehaviour
             
         }
         playSound.Play();
-
+        _currentItem.hasInteracted = true;
+        _currentItem.Interact();
 
 
 

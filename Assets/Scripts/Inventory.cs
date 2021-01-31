@@ -18,8 +18,9 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
-    }
 
+    }
+    
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 

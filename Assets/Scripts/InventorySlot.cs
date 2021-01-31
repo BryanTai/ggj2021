@@ -34,7 +34,8 @@ public class InventorySlot : MonoBehaviour
 
     public void OnGiveItem()
     {
-        if(_dialogueController.IsInDialogue() && !_dialogueController.HasCurrentNPCRecievedDesiredItem())
+        
+        if (_dialogueController.IsInDialogue() && !_dialogueController.HasCurrentNPCRecievedDesiredItem())
         {
             bool gaveDesiredItem = _dialogueController.TryToGiveDesiredItemToCurrentNPC(item);
             if(gaveDesiredItem)
