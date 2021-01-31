@@ -39,9 +39,10 @@ public class ThirdPersonMovement : MonoBehaviour
 				float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
 				float smoothedAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TurnSmoothTime);
 				transform.rotation = Quaternion.Euler(0f, smoothedAngle, 0f);
-
+				
 				Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 				controller.Move(moveDirection * Speed * Time.deltaTime);
+				controller.transform.position = new Vector3(transform.position.x, PlayerSize.current_height, transform.position.z);
 			}
 
 			animationController.SetRunning(isRunning);
