@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
 
 	private GameObject GameoverScreen;
 	private GameObject TutorialScreen;
+	private GameObject SplashScreen;
 	private Text ItemsReturnText;
 	private Text IncorrectItemsText;
 	private Text ItemsCleanedText;
@@ -26,7 +27,8 @@ public class GameController : MonoBehaviour
 	{
 		GameoverScreen = GameObject.Find("GameOverScreen");
 		TutorialScreen = GameObject.Find("TutorialScreen");
-		
+		SplashScreen = GameObject.Find("SplashScreen");
+
 		ItemsReturnText = GameObject.Find("ItemsReturnedCount").GetComponent<Text>();
 		IncorrectItemsText = GameObject.Find("WrongItemsGiven").GetComponent<Text>();
 		ItemsCleanedText = GameObject.Find("ItemsCleaned").GetComponent<Text>();
@@ -65,6 +67,14 @@ public class GameController : MonoBehaviour
 			if (TutorialScreen.activeSelf == true)
 			{
 				TutorialScreen.SetActive(false);
+			}
+		}
+
+		if (Input.GetButtonDown("Fire1"))
+		{
+			if (SplashScreen.activeSelf == true)
+			{
+				SplashScreen.SetActive(false);
 			}
 		}
 	}

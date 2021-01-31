@@ -259,7 +259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123
+  m_Text: 8
 --- !u!1 &3953996312009750282
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Items Returned:'
+  m_Text: 'Items Returned:     / 8'
 --- !u!1 &3996930350111783288
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 123
+  m_Text: 20
 --- !u!1 &7388489607969262371
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Items Cleaned:        / 50'
+  m_Text: 'Items Cleaned:      / 20'
 --- !u!1 &8342080108081524929
 GameObject:
   m_ObjectHideFlags: 0
