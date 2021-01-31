@@ -32,7 +32,7 @@ public class DialogueController : MonoBehaviour
 
 	private void Update()
 	{
-		if(Input.GetButtonDown("Fire1") && _currentNPC != null)
+		if(Input.GetButtonDown("Talk") && _currentNPC != null)
 		{
 			if(_currentLines == null)
 			{
@@ -86,6 +86,7 @@ public class DialogueController : MonoBehaviour
 	{
 		_currentLines = Data.GetAllLinesForConversation(_currentNPC.Name, newContext);
 		_currentLineIndex = 0;
+		ShowNextDialogueLine();
 	}
 
 	private void ShowNextDialogueLine()

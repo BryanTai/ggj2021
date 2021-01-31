@@ -53,7 +53,7 @@ public class ThirdPersonMovement : MonoBehaviour
 		}
 		
 		//Dedicated wobble button
-		if(Input.GetButtonDown("Fire2"))
+		if(Input.GetButtonDown("Talk") || Input.GetButtonDown("Fire2"))
 		{
 			animationController.TriggerPickup();
 		}
