@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6720772567492177221}
   - component: {fileID: 6720772568349158318}
+  - component: {fileID: -707140545831301785}
   m_Layer: 0
   m_Name: Daggar_01
   m_TagString: Untagged
@@ -223,3 +224,16 @@ MonoBehaviour:
   interactionTransform: {fileID: 6720772567492177221}
   player: {fileID: 0}
   item: {fileID: 11400000, guid: 1bb953c821352e9429d8b0ef7f6b1cdb, type: 2}
+--- !u!135 &-707140545831301785
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720772567492177220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

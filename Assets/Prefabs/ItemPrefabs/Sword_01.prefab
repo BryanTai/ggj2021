@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616110538843234961}
   - component: {fileID: 1616110537688458362}
+  - component: {fileID: 1118688856415866834}
   m_Layer: 0
   m_Name: Sword_01
   m_TagString: Untagged
@@ -223,3 +224,16 @@ MonoBehaviour:
   interactionTransform: {fileID: 1616110538843234961}
   player: {fileID: 0}
   item: {fileID: 11400000, guid: dd93904b5c857724fb46fc81ba0b3832, type: 2}
+--- !u!135 &1118688856415866834
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616110538843234960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

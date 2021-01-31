@@ -18,8 +18,9 @@ public class TriggerSFX : MonoBehaviour
             
         }
         playSound.Play();
-        // print("GameObject name = " + this.gameObject.name);
 
-        
+
+
+
     }
 }
