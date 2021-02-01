@@ -1,5 +1,6 @@
 ﻿public enum ItemName
 {
+	// Add new Names ON THE BOTTOM
 	Empty,
 	Amulet_01,
 	Amulet_02,
@@ -19,5 +20,6 @@
 	Rat,
 	Shark,
 	Shield,
-	Sword
+	Sword,
+	E,
 }

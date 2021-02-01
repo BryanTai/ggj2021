@@ -28,6 +28,12 @@ MonoBehaviour:
           Slime"
       - CurrentSpeaker: 0
         DialogueText: <bloop>
+    - Context: 2
+      Lines:
+      - CurrentSpeaker: 1
+        DialogueText: Uggh, FINE. I guess you are my little PogChamp. Come here...
+      - CurrentSpeaker: 0
+        DialogueText: <bloop>
   - NPC: 2
     Conversations:
     - Context: 0
