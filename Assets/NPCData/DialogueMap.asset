@@ -251,12 +251,13 @@ MonoBehaviour:
     - Context: 0
       Lines:
       - CurrentSpeaker: 10
-        DialogueText: "Air conditioner\u2019s busted, and I'm boiling."
+        DialogueText: I want to find something for my partner...
       - CurrentSpeaker: 0
         DialogueText: <blop?>
       - CurrentSpeaker: 10
-        DialogueText: 'I know I don''t have skin but just seeing the boss makes me
-          feel like I''m burning up. '
+        DialogueText: Wouldn't want to end up being bone-ly!
+      - CurrentSpeaker: 0
+        DialogueText: <blop...>
     - Context: 1
       Lines:
       - CurrentSpeaker: 10
@@ -265,13 +266,12 @@ MonoBehaviour:
       - CurrentSpeaker: 0
         DialogueText: <blop>
       - CurrentSpeaker: 10
-        DialogueText: 'Thanks James. Now if only we could do something about this
-          heat... '
+        DialogueText: Thanks James
     - Context: 2
       Lines:
       - CurrentSpeaker: 10
-        DialogueText: You can't tell but I'm sweating buckets!
+        DialogueText: Oh I can't wait to give this to them
     - Context: 3
       Lines:
       - CurrentSpeaker: 10
-        DialogueText: "What\u2019s this for? "
+        DialogueText: Hmm, I don't know about this one
